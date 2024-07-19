@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="top|center_horizontal"
+    >
+
+    <TextView
+        android:id="@+id/dateandtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Você trancou a porta?"
+        android:layout_marginTop="40dp"
+        android:textSize="28sp" />
+
+    <Button
+        android:id="@+id/botaodatetime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Tranquei"
+        android:layout_centerHorizontal="true"
+        android:background="@color/azul_clarinho"
+        android:layout_marginTop="40dp" />
+    <Button
+        android:id="@+id/lerHistoricoJson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Histórico"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="15dp"/>
+    <TextView
+        android:id="@+id/allLogsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lerHistoricoJson"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text=""/>
+</LinearLayout>
