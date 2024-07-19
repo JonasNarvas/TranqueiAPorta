@@ -59,11 +59,17 @@ class MainActivity : ComponentActivity() {
 
     }
     private fun logDateTime() {
-        val currentDateTime =
-            SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault()).format(Date())
+        val currentDateTime = SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault()).format(Date())
             logTimes.add(currentDateTime)
         val json = gson.toJson(logTimes)
+        saveLogTimes(json)
         dateTimeTextView.text = "Trancou! \n $currentDateTime"
+    }
+
+    private fun saveLogTimes(json:String){
+        val editor = sharedPreferences.edit()
+        editor.putString(KEY_LOG_TIMES, json)
+        editor.apply()
     }
 
     private fun readJson() {
